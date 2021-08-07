@@ -61,5 +61,4 @@ log_stderr=true ; if true, log program stderr (def false)
 logfile=/var/log/cf-tunnel.log ; child log path, use NONE for none; default AUTO
 
 
-cloudflared login
 ```
