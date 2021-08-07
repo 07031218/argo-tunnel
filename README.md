@@ -7,6 +7,7 @@ https://jaycechant.info/2020/name-server-from-dnspod-to-cloudflare/
 ```
 https://github.com/cloudflare/cloudflared/releases/
 ```
+
 比如下载amd64版本：
 ```
 wget -O /root/cloudflared https://github.com/cloudflare/cloudflared/releases/download/2021.8.1/cloudflared-linux-amd64
@@ -16,6 +17,8 @@ wget -O /root/cloudflared https://github.com/cloudflare/cloudflared/releases/dow
 ```
 mv /root/cloudflared /usr/bin/cloudflared
 ```
+## 开启argo tunnel穿透
+
 输入如下命令授权argo tunnel穿透
 ```
 cloudflared login
@@ -34,6 +37,8 @@ cloudflared tunnel --hostname abc.xxx.com --url localhost:1234
 ```
 
 打开浏览器输入http://abc.xxx.com ，正常已经完成穿透解析。
+
+## 第四步 保证argo tunnel后台运行& 进程守护
 
 使用以下命令让任务后台执行
 ```
